@@ -85,9 +85,6 @@ private extension CityMainView {
     ScrollView(.vertical, showsIndicators: false) {
       scrollContentView(for: city)
     }
-    .refreshable {
-      viewModel.input.pullToRefresh.send(())
-    }
   }
   
   func scrollContentView(for city: City) -> some View {
@@ -155,15 +152,14 @@ private extension CityMainView {
         Text("도시 위치")
       } contentView: {
         CityMapView(city: city)
-      } //: HeaderCoxntainerView
+      } //: HeaderContainerView
     } else {
       loadingIndicatorView
     }
   }
   
   func weatherDataView() -> some View {
-    //    OtherWeatherDataView([])
-    EmptyView()
+    CurrWeatherMonitorView(viewModel.output.currWeather)
   }
   
   var loadingIndicatorView: some View {
