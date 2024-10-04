@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct OpenWeatherAppApp: App {
+  
+  @UIApplicationDelegateAdaptor private var delegate: AppDelegate
+  
   var body: some Scene {
     WindowGroup {
       EmptyView()
