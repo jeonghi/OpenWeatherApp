@@ -134,7 +134,6 @@ private extension CityMainView {
   }
   
   /// 도시의 요일 별 예보
-  @ViewBuilder
   func dailyWeatherView() -> some View {
     
       HeaderContainerView {
