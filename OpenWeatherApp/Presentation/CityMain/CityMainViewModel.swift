@@ -86,7 +86,6 @@ final class CityMainViewModel: CityMainViewModelType {
     
     // MARK: Interaction
     var tappedSearchBar = PassthroughSubject<Void, Never>()
-    var pullToRefresh = PassthroughSubject<Void, Never>()
     
     // MARK: SideEffectHandler
     var fetchWeather = PassthroughSubject<Void, Never>()
