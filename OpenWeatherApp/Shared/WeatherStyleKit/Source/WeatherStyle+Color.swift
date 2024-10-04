@@ -7,7 +7,7 @@
 
 import SwiftUI
 // MARK: 시멘틱
-extension WeatherStyle.Color {
+public extension WeatherStyle.Color {
   static var background: Color { oceanMist }
   static var containerBackground: Color { skyBlue }
   static var font: Color { light }

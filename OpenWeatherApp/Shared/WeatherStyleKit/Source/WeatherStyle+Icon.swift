@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension WeatherStyle.Icon {
+public extension WeatherStyle.Icon {
   
   static let clearSky = Image("01d")
   static let fewClouds = Image("02d")

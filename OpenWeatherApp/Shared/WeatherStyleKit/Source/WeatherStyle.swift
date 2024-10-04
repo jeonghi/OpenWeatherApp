@@ -7,10 +7,10 @@
 
 import Foundation
 
-enum WeatherStyle {
-  enum Color {
+public enum WeatherStyle {
+  public enum Color {
   }
   
-  enum Icon {
+  public enum Icon {
   }
 }
