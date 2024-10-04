@@ -45,7 +45,9 @@ extension CitySearchView: BaseViewType {
         }
       } //: VStack
     }
-    .background(WeatherStyle.Color.background)
+    .background(
+      WeatherStyle.Color.background.ignoresSafeArea()
+    )
     .ex.foreground(WeatherStyle.Color.font)
     .ex.fullFrame()
   }

@@ -58,6 +58,7 @@ extension CityMainView: BaseViewType {
     .ex.fullFrame()
     .background(
       WeatherStyle.Color.background
+        .ignoresSafeArea()
     )
     .ex.task {
       viewModel.input.viewTask.send(())
