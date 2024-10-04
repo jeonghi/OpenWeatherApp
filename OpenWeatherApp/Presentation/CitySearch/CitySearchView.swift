@@ -103,7 +103,7 @@ private extension CitySearchView {
 #Preview {
   
   let viewModel = CitySearchViewModel.init(
-    cityUseCase: CityUseCaseMock.shared
+    cityUseCase: CityUseCaseImpl.shared
   )
   
   CitySearchView(viewModel: viewModel)

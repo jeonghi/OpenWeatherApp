@@ -180,7 +180,7 @@ private extension CityMainView {
 #Preview {
   
   let viewModel = CityMainViewModel.init(
-    cityUseCase: CityUseCaseMock.shared
+    cityUseCase: CityUseCaseImpl.shared
   )
   
   CityMainView(viewModel: viewModel)
