@@ -19,7 +19,6 @@ struct SearchBar: View {
   
   var body: some View {
     SearchBarRepresentable(text: $text, isUserInteractionEnabled: isUserInteractionEnabled)
-      .background(.clear)
   }
 }
 
