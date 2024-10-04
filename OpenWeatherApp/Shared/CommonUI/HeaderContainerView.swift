@@ -53,7 +53,7 @@ private extension HeaderContainerView {
   /// Header Section
   private func headerSection() -> some View {
     headerView
-      .font(.callout)
+      .font(.caption)
       .ex.hLeading()
       .ex.cornerRadius(12, corners: bottomOffset < 38 ? .allCorners : [.topLeft, .topRight])
   }
