@@ -31,7 +31,7 @@ private enum Metric {
   enum ScrollContent {
     static let horizontalPadding: CGFloat = 10
     static let topPadding: CGFloat = 25
-    static let bottomPadding: CGFloat = 10
+    static let bottomPadding: CGFloat = 30
     static let contentSpacing: CGFloat = 20
   }
 }
@@ -45,9 +45,6 @@ extension CityMainView: BaseViewType {
       if let city = viewModel.output.city {
         scrollView(for: city)
           .padding(.horizontal, Metric.ScrollContent.horizontalPadding)
-          .ex.safeAreaBottomPadding(
-            noSafeAreaPadding: Metric.ScrollContent.bottomPadding
-          )
       }
       else {
         loadingIndicatorView
@@ -99,6 +96,9 @@ private extension CityMainView {
       cityMapView()
         .aspectRatio(Metric.mapRatio, contentMode: .fit)
       weatherDataView()
+        .ex.safeAreaBottomPadding(
+          noSafeAreaPadding: Metric.ScrollContent.bottomPadding
+        )
     } //: VStack
   }
   

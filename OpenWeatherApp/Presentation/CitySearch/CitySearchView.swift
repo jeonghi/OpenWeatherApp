@@ -21,6 +21,7 @@ struct CitySearchView {
 private enum Metric {
   static let listItemHInset: CGFloat = 10
   static let listItemVInset: CGFloat = 10
+  static let scrollViewBottomWhenNoSafeArea: CGFloat = 30
 }
 
 // MARK: Layout
@@ -85,6 +86,10 @@ private extension CitySearchView {
             viewModel.input.fetchMoreCity.send()
           }
       }
+      
+      /// 바텀 패딩 위한 페이크 뷰
+      Color.clear.frame(height: 0.1)
+        .ex.safeAreaBottomPadding(noSafeAreaPadding: Metric.scrollViewBottomWhenNoSafeArea)
     } //: LazyVStack
   }
   
