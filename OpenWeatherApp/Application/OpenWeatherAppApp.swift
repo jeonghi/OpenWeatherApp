@@ -14,7 +14,7 @@ struct OpenWeatherAppApp: App {
   
   var body: some Scene {
     WindowGroup {
-      EmptyView()
+      CityView(viewModel: DIContainer.makeCityViewModel())
     }
   }
 }
