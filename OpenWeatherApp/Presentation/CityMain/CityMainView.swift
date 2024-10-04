@@ -39,7 +39,7 @@ private enum Metric {
 // MARK: Layout
 extension CityMainView: BaseViewType {
   
-  public var body: some View {
+  var body: some View {
     VStack(spacing: Metric.searchBarAndScrollSpacing) {
       searchBarView()
       if let city = viewModel.output.city {
