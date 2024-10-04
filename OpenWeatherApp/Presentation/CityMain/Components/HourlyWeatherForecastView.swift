@@ -43,15 +43,15 @@ extension HourlyWeatherForecastView {
   
   private func scrollContentItemView(for item: HourWeather) -> some View {
     VStack(alignment: .center, spacing: Metric.spacing) {
+      
       Text(item.date.asFormattedTimeString() ?? "")
       
       WeatherStyle.Icon.image(for: item.symbolName)
-      .resizable()
-      .scaledToFit()
-      .frame(height: Metric.weatherIconHeight)
+        .resizable()
+        .scaledToFit()
+        .frame(height: Metric.weatherIconHeight)
       
-      Text(item.temperature.formatted())
-
+      Text(item.temperature.asFormatted() ?? "")
         .bold()
     }
   }

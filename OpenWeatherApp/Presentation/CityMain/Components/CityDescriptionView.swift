@@ -28,13 +28,13 @@ extension CityDescriptionView: View {
       }
       
       if let currWeather {
-        Text("\(currWeather.temperature.formatted())")
+        Text("\(currWeather.temperature.asFormatted())")
           .font(.title3)
         Text("\(currWeather.condition)")
       }
       
       if let dayWeather {
-        Text("최고: \(dayWeather.highTemperature.formatted()) | 최소: \(dayWeather.lowTemperature.formatted())")
+        Text("최고: \(dayWeather.highTemperature.asFormatted()) | 최소: \(dayWeather.lowTemperature.asFormatted())")
       }
     } //: VStack
     .shadow(radius: 5)

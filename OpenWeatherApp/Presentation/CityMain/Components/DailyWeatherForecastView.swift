@@ -47,7 +47,7 @@ private extension DailyWeatherForecastView {
         .scaledToFit()
         .frame(height: Metric.weatherIconHeight)
         .ex.hCenter()
-      Text("최소:\(item.lowTemperature.formatted()) 최대:\(item.highTemperature.formatted())")
+      Text("최소:\(item.lowTemperature.asFormatted()) 최대:\(item.highTemperature.asFormatted())")
         .lineLimit(1)
         .frame(width: 180, alignment: .trailing)
     }
