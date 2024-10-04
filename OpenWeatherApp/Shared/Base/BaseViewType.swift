@@ -5,8 +5,8 @@
 //  Created by 쩡화니 on 10/1/24.
 //
 
-import Foundation
+import SwiftUI
 
-protocol BaseViewType {
+protocol BaseViewType: View {
   
 }
