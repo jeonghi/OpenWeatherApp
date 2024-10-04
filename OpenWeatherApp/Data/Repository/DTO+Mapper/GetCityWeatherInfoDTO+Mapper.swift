@@ -22,7 +22,7 @@ extension GetCityWeatherInfoDTO.Response {
       humidity: Double(self.current.humidity) / 100.0,
       pressure: Measurement(value: Double(self.current.pressure), unit: UnitPressure.hectopascals),
       temperature: Measurement(value: self.current.temp.asCelsius(), unit: UnitTemperature.celsius),
-      windSpeed: Measurement(value: self.current.windSpeed, unit: UnitSpeed.kilometersPerHour),
+      windSpeed: Measurement(value: self.current.windSpeed, unit: UnitSpeed.metersPerSecond),
       metadata: WeatherMetadata(date: Date(), location: self.location.toCLLocation())
     )
     
