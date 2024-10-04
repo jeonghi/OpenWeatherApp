@@ -9,7 +9,7 @@ import SwiftUI
 
 // Presentation 계층에서 따로 확장하는 메서드라 ExtensionKit에 두지 않고 별도로 분리
 // 패키지로 ExtensionKit을 분리한다면 유용
-extension ViewExtension {
+public extension ViewExtension {
   func alertNetworkMonitor() -> some View {
     self
       .modifier(NetworkMonitorViewModifier())
