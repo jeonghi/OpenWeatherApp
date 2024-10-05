@@ -14,7 +14,7 @@ enum WeatherAPI {
 extension WeatherAPI: RouterType {
   
   var baseUrl: String {
-    Environment.baseUrl
+    AppEnvironment.baseUrl
   }
   
   var path: String {
@@ -39,7 +39,7 @@ extension WeatherAPI: RouterType {
     switch self {
     case .fetchWeatherInfo(let params):
       var dict = params.asDictionary()
-      dict?["appid"] = Environment.apiKey
+      dict?["appid"] = AppEnvironment.apiKey
       dict?["lang"] = "kr"
       return dict
     }
