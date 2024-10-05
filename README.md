@@ -102,6 +102,8 @@ Xcode Configuration 파일을 생성해 환경 변수를 주입해줘야합니�
   - 확장 유틸리티들은 버전 분기를 통해 다양한 플랫폼에 대응 가능한 구조로 개발하였습니다.
 
 ### 4.  레이어드 아키텍쳐
+<img width="1596" alt="image" src="https://github.com/user-attachments/assets/7250f4b0-e1d9-4bb4-aed7-69cfeaa8926c">
+
 
 >**Application**: 애플리케이션의 흐름을 조율하는 계층.
 >
