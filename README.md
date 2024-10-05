@@ -39,7 +39,10 @@
 
 - 1’st Library Only
 
-  
+## 구현 화면
+
+![Simulator Screen Recording - iPhone 15 Pro - 2024-10-05 at 08 32 36](https://github.com/user-attachments/assets/fd6d2d7e-2c60-40f6-8b91-0d1bc22ce760)
+
 
 ##  ⚙️ 앱 빌드 전 환경 설정 (필수)
 
