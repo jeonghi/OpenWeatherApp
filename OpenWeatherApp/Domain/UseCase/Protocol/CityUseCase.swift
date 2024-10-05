@@ -16,4 +16,5 @@ protocol CityUseCaseType: AnyObject {
   func fetchCityList(page: Int, pageSize: Int, query: String?) async throws -> [City]
   
   func loadLatestCity() async -> City
+  func updateLatestCity(for city: City) async
 }

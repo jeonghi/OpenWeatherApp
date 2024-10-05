@@ -23,5 +23,13 @@ final class CityWeatherRepositoryMock: CityWeatherRepositoryType {
   func fetchWeather(for location: CLLocation) async throws -> Weather {
     .dummyData
   }
+  
+  func fetchLastCity() async -> City {
+    .dummyData
+  }
+  
+  func updateLastCity(_ city: City) async {
+    
+  }
 }
 

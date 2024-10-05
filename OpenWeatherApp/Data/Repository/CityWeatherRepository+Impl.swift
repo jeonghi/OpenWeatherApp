@@ -21,13 +21,11 @@ final class CityWeatherRepositoryImpl: CityWeatherRepositoryType {
   // MARK: properties
   private var cachedCities: [CityEntity] = []
   
+  @UserDefaultWrapper(key: "latestCity", defaultValue: City.default.toCityEntity())
+  private(set) var latestCity: CityEntity
+  
   // MARK: constructor
   private init() {}
-  
-  func fetchCityList() async throws -> [City] {
-    let cityEntities = try await cityDatasource.fetchAllCities()
-    return cityEntities.map { $0.toCityModel() }
-  }
   
   func fetchWeather(for location: CLLocation) async throws -> Weather {
     
@@ -79,5 +77,13 @@ final class CityWeatherRepositoryImpl: CityWeatherRepositoryType {
     // CityEntity -> CityModel 변환하여 반환
     let pagedCities = Array(filteredCities[startIndex..<endIndex])
     return pagedCities.map { $0.toCityModel() }
+  }
+  
+  func fetchLastCity() async -> City {
+    latestCity.toCityModel()
+  }
+  
+  func updateLastCity(_ city: City) async {
+    self.latestCity = city.toCityEntity()
   }
 }

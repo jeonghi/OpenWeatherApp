@@ -15,4 +15,6 @@ protocol CityWeatherRepositoryType: AnyObject {
   
   /// 저장소에서 도시 기후 정보를 불러오는 메서드
   func fetchWeather(for location: CLLocation) async throws -> Weather
+  func fetchLastCity() async -> City
+  func updateLastCity(_ city: City) async
 }

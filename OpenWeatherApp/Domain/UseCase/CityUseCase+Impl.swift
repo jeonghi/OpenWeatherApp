@@ -20,12 +20,13 @@ final class CityUseCaseImpl: CityUseCaseType {
   
   // MARK: Utils
   func fetchCityWeather(for city: City) async throws -> Weather {
-    return try await weatherRepository.fetchWeather(
+    let weather = try await weatherRepository.fetchWeather(
       for: .init(
         latitude: city.coordinate.latitude,
         longitude: city.coordinate.longitude
       )
     )
+    return weather
   }
   
   func fetchCityList(page: Int = 1, pageSize: Int = 20, query: String? = nil) async throws -> [City] {
@@ -38,6 +39,10 @@ final class CityUseCaseImpl: CityUseCaseType {
   }
   
   func loadLatestCity() async -> City {
-    return .default
+    return await weatherRepository.fetchLastCity()
+  }
+  
+  func updateLatestCity(for city: City) async {
+    await weatherRepository.updateLastCity(city)
   }
 }

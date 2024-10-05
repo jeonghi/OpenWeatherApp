@@ -26,4 +26,7 @@ final class CityUseCaseMock: CityUseCaseType {
   func loadLatestCity() async -> City {
     return .default
   }
+  
+  func updateLatestCity(for city: City) async {
+  }
 }

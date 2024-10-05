@@ -51,6 +51,7 @@ final class CityMainViewModel: CityMainViewModelType {
   }
   
   private func bindToSelectCity() {
+    
     let selectCity = input.selectCity
       .throttle(for: .seconds(0.5), scheduler: DispatchQueue.global(), latest: true)
       .drop { [weak self] in $0 == self?.output.city }
@@ -73,6 +74,17 @@ final class CityMainViewModel: CityMainViewModelType {
             self.updateErrorState(error)
           }
         }.store(in: cancellableTaskBag)
+      }
+      .store(in: &cancellables)
+    
+    selectCity
+      .compactMap { $0 }
+      .sink { [weak self] value in
+        guard let self else { return }
+        Task {
+          await self.cityUseCase.updateLatestCity(for: value)
+        }
+        .store(in: cancellableTaskBag)
       }
       .store(in: &cancellables)
   }
