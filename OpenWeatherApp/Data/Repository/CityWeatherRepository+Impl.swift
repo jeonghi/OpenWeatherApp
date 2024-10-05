@@ -45,8 +45,6 @@ final class CityWeatherRepositoryImpl: CityWeatherRepositoryType {
       GetCityWeatherInfoDTO.Response.self
     )
     
-    print(requestDTO)
-    
     return responseDTO.toWeather()
   }
   
