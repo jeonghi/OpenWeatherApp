@@ -21,3 +21,17 @@ extension CityEntity {
     )
   }
 }
+
+extension City {
+  func toCityEntity() -> CityEntity {
+    .init(
+      id: self.id,
+      name: self.name,
+      country: self.country,
+      coord: .init(
+        lat: self.coordinate.latitude,
+        lon: self.coordinate.longitude
+      )
+    )
+  }
+}

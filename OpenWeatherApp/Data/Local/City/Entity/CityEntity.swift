@@ -8,7 +8,7 @@
 import Foundation
 
 /// 영속성 계층에서 사용할 City 객체
-struct CityEntity: Decodable {
+struct CityEntity: Codable {
   let id: Int
   let name: String // 도시 이름
   let country: String // 나라 (국가 코드)
@@ -21,7 +21,7 @@ struct CityEntity: Decodable {
     case coord
   }
 
-  struct Coordinate: Decodable {
+  struct Coordinate: Codable {
     let lat: Double
     let lon: Double
   }
