@@ -37,7 +37,7 @@
 
 - 지도: MapKit
 
-- 1’st Library Only
+- 1’st Party Only
 
 ## 구현 화면
 
